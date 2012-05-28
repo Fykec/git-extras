@@ -10,6 +10,12 @@ Clone / Tarball:
 $ make install
 ```
 
+```bash
+$ cd /usr/local/bin #git command file been copied in this folder
+
+$ sudo chmod a+x git-* #change all git command file to executable
+```
+
 One-liner:
 
 ```bash
