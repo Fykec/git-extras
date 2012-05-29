@@ -3,4 +3,12 @@
 SERVER_ALIAS="$1"
 BRANCH_PATH="$2"
 git pull --rebase && git push "$SERVER_ALIAS" "$BRANCH_PATH"
-echo "Note: push succeed, may be you need cherry-pick this commit to another branch."
+#Add note for cherry-pick 
+echo "   *"
+echo "  * *"
+echo " *   *"
+echo "*     ******************************************************"
+echo "*                                                          *"
+echo "* Push succeed, cherry-pick this commit to another branch? *"
+echo "*                                                          *"
+echo "************************************************************"
