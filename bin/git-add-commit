@@ -1,0 +1,5 @@
+#!/bin/sh
+
+AMEND="$1"
+
+git add -A . && git commit $AMEND

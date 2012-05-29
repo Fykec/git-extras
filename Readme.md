@@ -64,6 +64,7 @@ $ brew install git-extras
  - `git promote`
  - `git local-commits`
  - `git reba-push`
+ - `git add-commit`
 
 ## extras
 
@@ -461,3 +462,7 @@ List all commits on the local branch that have not yet been sent to origin. Any 
 ## git-reba-push
 
 Before git push do pull --rebase first
+
+## git-add-commit
+
+do git add -A . and git commit 
