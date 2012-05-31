@@ -65,6 +65,7 @@ $ brew install git-extras
  - `git local-commits`
  - `git reba-push`
  - `git add-commit`
+ - `git create-tag`
 
 ## extras
 
@@ -466,3 +467,7 @@ Before git push do pull --rebase first
 ## git-add-commit
 
 do git add -A . and git commit 
+
+## git-create-tag
+
+do create tag and push it to remote origin
