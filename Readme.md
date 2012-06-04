@@ -63,6 +63,7 @@ $ brew install git-extras
  - `git bug`
  - `git promote`
  - `git local-commits`
+ - `git reba-pull`
  - `git reba-push`
  - `git add-commit`
  - `git create-tag`
@@ -459,6 +460,10 @@ Call `touch` on the given file, and add it to the current index. One-step creati
 ## git-local-commits
 
 List all commits on the local branch that have not yet been sent to origin. Any additional arguments will be passed directly to git log.
+
+## git-reba-pull
+
+do pull --rebase 
 
 ## git-reba-push
 
