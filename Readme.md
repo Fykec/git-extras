@@ -34,6 +34,12 @@ $ sudo port install git-extras
 $ brew install git-extras
 ```
 
+## Screencasts
+
+  Just getting started? Check out these screencasts:
+  
+ - [introduction](https://vimeo.com/45506445) -- covering git-ignore, git-setup, git-changelog, git-release, git-effort and more
+
 ## Commands
 
  - `git extras`
@@ -51,6 +57,7 @@ $ brew install git-extras
  - `git graft`
  - `git alias`
  - `git ignore`
+ - `git info`
  - `git release`
  - `git contrib`
  - `git repl`
@@ -58,6 +65,7 @@ $ brew install git-extras
  - `git gh-pages`
  - `git setup`
  - `git touch`
+ - `git obliterate`
  - `git feature`
  - `git refactor`
  - `git bug`
@@ -141,10 +149,12 @@ Outputs a repo summary:
 ```bash
 $ git summary
 
-project: git-extras
-commits: 163
-files  : 93
-authors: 
+project  : git-extras
+repo age : 10 months ago
+commits  : 163
+active   : 60 days
+files    : 93
+authors  :
    97	Tj Holowaychuk          59.5%
    37	Jonhnny Weslley         22.7%
 	8	Kenneth Reitz           4.9%
@@ -335,6 +345,56 @@ build
 *.log
 ```
 
+# git-info
+
+Show information about the repo:
+
+```bash
+$ git info
+
+    ## Remote URLs:
+
+    origin              git@github.com:sampleAuthor/git-extras.git (fetch)
+    origin              git@github.com:sampleAuthor/git-extras.git (push)
+
+    ## Remote Branches:
+
+    origin/HEAD -> origin/master
+    origin/myBranch
+
+    ## Local Branches:
+
+    myBranch
+    * master
+
+    ## Most Recent Commit:
+
+    commit e3952df2c172c6f3eb533d8d0b1a6c77250769a7
+    Author: Sample Author <sampleAuthor@gmail.com>
+
+    Added git-info command.
+
+    Type 'git log' for more commits, or 'git show <commit id>' for full commit details.
+
+    ## Configuration (.git/config):
+
+    color.diff=auto
+    color.status=auto
+    color.branch=auto
+    user.name=Sample Author
+    user.email=sampleAuthor@gmail.com
+    core.repositoryformatversion=0
+    core.filemode=true
+    core.bare=false
+    core.logallrefupdates=true
+    core.ignorecase=true
+    remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+    remote.origin.url=git@github.com:mub/git-extras.git
+    branch.master.remote=origin
+    branch.master.merge=refs/heads/master
+
+```
+
 ## git-create-branch &lt;name&gt;
 
 Create local and remote branch `name`:
@@ -456,6 +516,14 @@ Set up a git repository (if one doesn't exist), add all files, and make an initi
 ## git-touch [filename]
 
 Call `touch` on the given file, and add it to the current index. One-step creation of new files.
+
+## git-obliterate [filename]
+
+Completely remove a file from the repository, including past commits and tags.
+
+```bash
+git obliterate secrets.json
+```
 
 ## git-local-commits
 
